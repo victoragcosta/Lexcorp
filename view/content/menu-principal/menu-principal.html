@@ -1,91 +1,36 @@
 <!DOCTYPE html>
-
+<html>
 <head>
-	<meta charset="utf-8">
+	   <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" type="text/css" href="../css/menu.css">
      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
      <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
      <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-     <style>
-     
-     	div.pad {
-
-     		padding-bottom: 50px;
-     		margin-bottom: 0;
-     	}
-     	button {
-     		font-weight: bold;
-     		color: #262626;
-     		background-color: #999966;
-     		border-color: #999966;
-     		border-radius: 10px;
-     	}
-     	button.pad {
-     		margin-top: 40px;
-     		margin-left: 10px;
-     		margin-right: 10px;
-     	}
-   		.navbar-fixed-left {
-   			width: 140px;
-   			position: fixed;
-   			border-radius: 0;
-   			height: 100%;
-   		}
-   		.navbar-fixed-left .navbar-nav > li {
-   			width: 140px;
-   		}
-   		.logout {
-   			background-color: #ffffff;
-   			color: #ff0000;
-   			margin-left: 30px;
-   			margin-top: 200px;
-   		}
-   		.navbar-color-top {
-   			background-color: #732673;
-   		}
-   		.navbar-color-left {
-   			background-color: #4d9900;
-   		}
-   		.dislocate-to-right {
-   			margin-left: 90%;
-   		}
-   		.irradiate {
-   			border-radius: 10px;
-   			border-color: #ff0000;
-   			color: #ffffff;
-   			padding-bottom: 20px;
-   			padding-top: 20px;
-   			background-color: #ff0000;
-   			margin-top: 30px;
-   			margin-bottom: 0;
-   		}
-   		.glyphicon {
-   			font-size: 70px;
-   			position: absolute;
-   			left: 50px;
-   			top: 35px;
-   		}
-   		#clickable {
-   			cursor: pointer;
-   		}
-     </style>
 </head>
 
 <body>
-	<div class="navbar navbar-default navbar-top-fixed navbar-color-top pad">
-		<span id="clickable" class="glyphicon glyphicon-align-justify"></span>
-		<button type="button" class="irradiate dislocate-to-right">Emergência</button>
-	</div>
-	<div class="navbar navbar-inverse navbar-fixed-left navbar-color-left">
-		<ul class="nav navbar-nav">
-			<button class="pad">Tarefas em Andamento</button>
-			<button class="pad">Tarefas Completadas</button>
-			<button class="pad">Tarefas Fracassadas</button>
-			<button class="logout">Log Out</button>
-		</ul>
-	</div>
+	<nav class="navbar navbar-default navbar-top-fixed navbar-color-top pad">
+		<span class="container-fluid">
+      <span id="clickable" class="glyphicon glyphicon-align-justify"></span>
+    </span>
+    <span>
+      <button type="button" class="irradiate dislocate-to-right">Emergência</button>
+    </span>
+	</nav>
+
+  <nav class="container-fluid">
+  	<div class="navbar navbar-inverse navbar-fixed-left navbar-color-left">
+  		<ul class="nav navbar-nav">
+  			<li><button class="btn btn-default">Tarefas em Andamento</button></li>
+  			<li><button class="btn btn-default">Tarefas Completadas</button></li>
+  			<li><button class="btn btn-default">Tarefas Fracassadas</button></li>
+  			<li><button class="btn btn-default">Log Out</button></li>
+  		</ul>
+  	</div>
+  </nav>
 	<table>
 		<tr>
 			<th></th>
