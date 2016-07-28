@@ -1,0 +1,21 @@
+.glyphicon-ok {
+	color: #00e000;
+}
+.glyphicon-remove {
+	color: #e00000;
+}
+.glyphicon-pencil {
+	color: #e0e000;
+}
+
+td {
+	text-align: center;
+}
+
+th {
+	text-align: center;
+}
+
+button:hover{
+	background-color: #b3b3ff;
+}

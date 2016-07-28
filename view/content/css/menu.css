@@ -1,0 +1,50 @@
+button {
+	font-weight: bold;
+	color: #262626;
+	background-color: #999966;
+	border-color: #999966;
+	border-radius: 10px;
+}
+.navbar-fixed-left {
+	width: 140px;
+	position: fixed;
+	border-radius: 0;
+	height: 100%;
+}
+.navbar-fixed-left .navbar-nav > li {
+	width: 140px;
+}
+.logout {
+	background-color: #ffffff;
+	color: #ff0000;
+	margin-left: 30px;
+	margin-top: 200px;
+}
+.navbar-color-top {
+	background-color: #732673;
+}
+.navbar-color-left {
+	background-color: #4d9900;
+}
+.dislocate-to-right {
+	margin-left: 90%;
+}
+.irradiate {
+	border-radius: 10px;
+	border-color: #ff0000;
+	color: #ffffff;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	background-color: #ff0000;
+	margin-top: 30px;
+	margin-bottom: 0;
+}
+.glyphicon {
+	font-size: 70px;
+	position: absolute;
+	left: 50px;
+	top: 35px;
+}
+#clickable {
+  cursor: pointer;
+}

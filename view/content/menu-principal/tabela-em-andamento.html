@@ -1,0 +1,108 @@
+<!-- Para motivos de teste vou inserir o corpo do html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Teste da tabela</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/tabelas.css">
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="table-responsive">
+			<table class="table table-bordered table-condensed">
+				<thead>
+					<tr class="active">
+						<th class="col-md-7">Descrição</th>
+						<th class="col-md-1">Início</th>
+						<th class="col-md-1">Prazo</th>
+						<th class="col-md-1">Sucesso</th>
+						<th class="col-md-1">Fracasso</th>
+						<th class="col-md-1">Editar</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<!-- Item de exemplo -->
+					<tr>
+						<td>Descrição</td>
+						<td>Início</td>
+						<td>Prazo</td>
+						<td><button><span class="glyphicon glyphicon-ok"></span></button></td>
+						<td><button type="button" data-toggle="modal" data-target="#fracasso"><span class="glyphicon glyphicon-remove"></span></button></td>
+						<td>
+						<button type="button" data-toggle="modal" data-target="#editar"><span class="glyphicon glyphicon-pencil"></span></button>
+						</td>
+					</tr>
+
+					<!-- Parte de adicionar novo item -->
+					<tr>
+						<td class="col-md-7" colspan="2"><input type="text" id="descricao-nova"></td>
+						<td class="col-md-1"><input type="text" id="prazo-novo"></td>
+						<td colspan="3"><button style="width: 100%;"><span class="glyphicon glyphicon-plus"></span></button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!-- Modal de editar campo -->
+	<div id="editar" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title"><button type="button" class="btn btn-default" style="background-color: #993333;"><span class="glyphicon glyphicon-trash" style="color: white;"></span>
+					</button> Editar Compromisso</h4>
+				</div>
+
+				<div class="modal-body">
+					<form role="form">
+						<div class="form-group">
+							<label for="descricao-editar">Nova descrição:</label>
+							<input type="text" class="form-control" id="descricao-editar">
+						</div>
+						<div class="form-group">
+							<label for="prazo-editar">Novo prazo: (melhorar o input)</label>
+							<input type="text" class="form-control" id="prazo-editar">
+						</div>
+						<button type="submit" class="btn btn-default">Confirmar</button>
+					</form>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<div id="fracasso" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4>Fracasso!</h4>
+				</div>
+
+				<div class="modal-body">
+					<form role="form">
+						<div class="form-group">
+							<label for="motivo">Escreva o motivo:</label>
+							<input type="text" class="form-control" id="motivo">
+						</div>
+						<button type="submit" class="btn btn-default">Confirmar</button>
+					</form>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+</body>
+
+</html>
