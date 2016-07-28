@@ -12,10 +12,19 @@ td {
 	text-align: center;
 }
 
-th {
-	text-align: center;
-}
-
 button:hover{
 	background-color: #b3b3ff;
+}
+
+button.deletar {
+	background-color: #993333;
+	float: left;
+}
+
+.tabela {
+	width: 100%;
+}
+
+.glyphicon-trash {
+	color: white;
 }

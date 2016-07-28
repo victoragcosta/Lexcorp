@@ -13,17 +13,20 @@
 </head>
 
 <body>
-	<div class="container">
+	<!-- Usar isso para base pro back end -->
+	<div class="container-fluid">
 		<div class="table-responsive">
 			<table class="table table-bordered table-condensed">
 				<thead>
 					<tr class="active">
-						<th class="col-md-7">Descrição</th>
-						<th class="col-md-1">Início</th>
-						<th class="col-md-1">Prazo</th>
-						<th class="col-md-1">Sucesso</th>
-						<th class="col-md-1">Fracasso</th>
-						<th class="col-md-1">Editar</th>
+						<div class="row">
+							<th class="col-md-7">Descrição</th>
+							<th class="col-md-1">Início</th>
+							<th class="col-md-1">Prazo</th>
+							<th class="col-md-1">Sucesso</th>
+							<th class="col-md-1">Fracasso</th>
+							<th class="col-md-1">Editar</th>
+						</div>
 					</tr>
 				</thead>
 
@@ -33,18 +36,18 @@
 						<td>Descrição</td>
 						<td>Início</td>
 						<td>Prazo</td>
-						<td><button><span class="glyphicon glyphicon-ok"></span></button></td>
-						<td><button type="button" data-toggle="modal" data-target="#fracasso"><span class="glyphicon glyphicon-remove"></span></button></td>
+						<td><button id="sucesso" class="tabela"><span class="glyphicon glyphicon-ok"></span></button></td>
+						<td><button class="tabela" type="button" data-toggle="modal" data-target="#fracasso"><span class="glyphicon glyphicon-remove"></span></button></td>
 						<td>
-						<button type="button" data-toggle="modal" data-target="#editar"><span class="glyphicon glyphicon-pencil"></span></button>
+						<button class="tabela" type="button" data-toggle="modal" data-target="#editar"><span class="glyphicon glyphicon-pencil"></span></button>
 						</td>
 					</tr>
 
 					<!-- Parte de adicionar novo item -->
 					<tr>
-						<td class="col-md-7" colspan="2"><input type="text" id="descricao-nova"></td>
-						<td class="col-md-1"><input type="text" id="prazo-novo"></td>
-						<td colspan="3"><button style="width: 100%;"><span class="glyphicon glyphicon-plus"></span></button></td>
+						<td class="col-md-7" colspan="2"><input class="tabela" type="text" id="descricao-nova"></td>
+						<td class="col-md-1"><input class="tabela" type="text" id="prazo-novo"></td>
+						<td colspan="3"><button class="tabela"><span class="glyphicon glyphicon-plus"></span></button></td>
 					</tr>
 				</tbody>
 			</table>
@@ -58,8 +61,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title"><button type="button" class="btn btn-default" style="background-color: #993333;"><span class="glyphicon glyphicon-trash" style="color: white;"></span>
-					</button> Editar Compromisso</h4>
+					<h4 class="modal-title">Editar Compromisso</h4>
 				</div>
 
 				<div class="modal-body">
@@ -72,14 +74,21 @@
 							<label for="prazo-editar">Novo prazo: (melhorar o input)</label>
 							<input type="text" class="form-control" id="prazo-editar">
 						</div>
-						<button type="submit" class="btn btn-default">Confirmar</button>
 					</form>
+				</div>
+
+				<div class="modal-footer">
+					<button id="deletar" type="button" class="btn btn-default deletar" data-dismiss="modal"><span class="glyphicon glyphicon-trash"></span>
+					</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+					<button id="alterar" type="submit" class="btn btn-default" data-dismiss="modal">Confirmar</button>
 				</div>
 			</div>
 			
 		</div>
 	</div>
 
+	<!-- Modal de fracasso -->
 	<div id="fracasso" class="modal fade" role="dialog">
 		<div class="modal-dialog">
 
@@ -95,8 +104,11 @@
 							<label for="motivo">Escreva o motivo:</label>
 							<input type="text" class="form-control" id="motivo">
 						</div>
-						<button type="submit" class="btn btn-default">Confirmar</button>
 					</form>
+				</div>
+
+				<div class="modal-footer">
+					<button id="fracassar" type="submit" data-dismiss="modal" class="btn btn-default">Confirmar</button>
 				</div>
 			</div>
 			
