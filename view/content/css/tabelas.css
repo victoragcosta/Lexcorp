@@ -1,0 +1,13 @@
+.glyphicon-ok {
+	color: #00ff00;
+}
+.glyphicon-remove {
+	color: #ff0000;
+}
+.glyphicon-pencil {
+	color: #ffff00;
+}
+
+.glyphicon:hover{
+	color: #668cff;
+}
