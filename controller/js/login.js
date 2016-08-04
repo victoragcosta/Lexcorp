@@ -22,10 +22,28 @@ var acesso_secreto = function(){
 	})
 }
 
-//TODO: funcao de login
+var login = function(){
+	$(document).on('click','#submit',function(){
+
+		var user = $('#username').val();
+		var pass = $('#password').val();
+
+		$.ajax({
+			type: "POST",
+			url: 'controller/LoginController.php',
+			data: {func:'login',user:user,pass:pass},
+			success: function(data){
+				if(data != 'nope'){
+					$('#spa-content').html(data);
+				}
+			}
+		});
+	});
+}
+
 //TODO: funcao de logout
 
 $(document).ready(start);
 $(document).ready(acesso_secreto);
-//TODO: ready de login
+$(document).ready(login);
 //TODO: ready de logout
