@@ -1,4 +1,13 @@
-//TODO: funcao de start
+var start = function(){
+	$.ajax({
+		type: "POST",
+		url: 'controller/LoginController.php',
+		data: {func:'start'},
+		success: function(data){
+			$('#spa-content').html(data);
+		}
+	});
+}
 
 var acesso_secreto = function(){
 	$(document).on("click","#Bilionario", function(){
@@ -16,7 +25,7 @@ var acesso_secreto = function(){
 //TODO: funcao de login
 //TODO: funcao de logout
 
-//TODO: ready do start
+$(document).ready(start);
 $(document).ready(acesso_secreto);
 //TODO: ready de login
 //TODO: ready de logout
