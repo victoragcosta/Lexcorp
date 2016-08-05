@@ -9,34 +9,42 @@
      <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="../../../controller/js/menu-principal.js"></script>
+<style>
+
+      </style>
+
+
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse navbar-top-fixed navbar-color-top padtop">
+    <nav class="navbar navbar-inverse navbar-top-fixed navbar-color-top padtop" id="navbar-top">
       <div class="container">
         <div class="navbar-header">
-            <a href="#"> <span class="glyphicon glyphicon-align-justify glyph1"></span></a>
+           <span style="cursor:pointer" onclick="openNav()" class="glyphicon glyphicon-align-justify" id="glyph1"></span>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
+        <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-             <h1>Lex Corp</h1>
-             <button type="button" class="irradiate dislocate-to-right">Emergência</button>
+             <h1 id="title">Lex Corp</h1>
+             <button type="button" id="irradiate">Emergência</button>
           </ul>
         </div>
       </div>
     </nav>
-  <nav class="navbar navbar-inverse navbar-fixed-left navbar-color-left">
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <img src="../../../img/lex.jpg" class="lex">
-            <li><a href="#">Tarefas em Andamento</a></li>
-            <li><a href="#">Tarefas Fracassadas</a></li>
-            <li><a href="#">Tarefas Concluídas</a></li>
-            <span class="glyphicon glyphicon-off glyph2"></span>
-            <li><a href="#">Log Out</a></li>
-          </ul>
-        </div>
-    </nav>
+
+    <nav style="background-color: #4d9900" class="navbar navbar-inverse navbar-fixed-left" id="mySideNav">
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <img src="../img/lex.jpg" id="lex">
+              <li><a href="#">Tarefas em Andamento</a></li>
+              <li><a href="#">Tarefas Fracassadas</a></li>
+              <li><a href="#">Tarefas Concluídas</a></li>
+              <span class="glyphicon glyphicon-off" id="glyph2"></span>
+              <li><a href="#">Log Out</a></li>
+            </ul>
+          </div>
+      </nav>
+
 </body>
 
 </html>
