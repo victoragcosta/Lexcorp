@@ -28,7 +28,20 @@ class EstadoDao{
 		return $array;
 	}
 
-	
+	public static function getEstados(){
+		
+		$sql = "SELECT * FROM estado";
+		$result = ConnectionUtil::executarSelect($sql);
+		return EstadoDao::parseList($result);
+	}
+
+	public static function getById($id){
+
+		$sql = "SELECT * FROM estado WHERE id = " . $id;
+		$result = ConnectionUtil::executarSelect($sql);
+		return EstadoDao::parse($result[0]);
+
+	}
 
 }
 

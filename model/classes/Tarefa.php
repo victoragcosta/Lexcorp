@@ -8,7 +8,7 @@ class Tarefa{
 	private $prazo;
 	private $dataFim;
 	private $motivo;
-	private $estadoId
+	private $estado
 
 	public function getId() {
 		return $this->id;
@@ -58,12 +58,12 @@ class Tarefa{
 		$this->motivo = $motivo;
 	}
 
-	public function getEstadoId() {
-		return $this->estadoId;
+	public function getEstado() {
+		return $this->estado;
 	}
 
-	public function setEstadoId($estadoId){
-		$this->estadoId = $estadoId;
+	public function setEstado($estado){
+		$this->estado = $estado;
 	}
 	
 }

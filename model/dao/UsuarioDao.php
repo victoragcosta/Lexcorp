@@ -30,7 +30,7 @@ class UsuarioDao{
 
 	public static function getUsuario($user,$pass){
 
-		$sql = "SELECT * FROM USUARIO WHERE USER = '".$user."' AND PASSWORD = '".$pass."'";
+		$sql = "SELECT * FROM usuario WHERE usuario = '".$user."' AND senha = '".$pass."'";
 		$result = ConnectionUtil::executarSelect($sql);
 		return UsuarioDao::parse($result[0]);
 
