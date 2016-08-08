@@ -6,7 +6,20 @@ class TarefaService{
 
 	public static function getTarefas($estado){
 
-		return TarefaDao::getTarefas($estado);
+		switch ($estado) {
+			case 'Andamento':
+				return TarefaDao::getTarefasAndamento();
+
+			case 'Falhou':
+				return TarefaDao::getTarefasFalhou();
+
+			case 'Sucesso':
+				return TarefaDao::getTarefasSucesso();
+
+			default:
+				return TarefaDao::getTarefas();
+		}
+
 	}
 
 	public static function inserir($descricao,$dataInicio,$prazo,$dataFim,$motivo,$estadoId){
