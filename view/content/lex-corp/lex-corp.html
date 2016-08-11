@@ -26,21 +26,23 @@
 		<div class="col-sm-6">	
 			<p id="introtext">"<span id="Founder">Lorem</span> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et <span id="Bilionario">dolore</span> magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <span id="Playboy">ullamco</span> laboris nisi ut aliquip ex ea commodo <span id="Genio">consequat</span>. Duis aute irure dolor in reprehenderit in voluptate velit esse <span id = "Filantropo">cillum</span> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 		</div>
-		<div class="col-sm-6">
+		<div class="col-sm-6" >
 			<p>
 				<img id="lex" src="http://cdn.movieweb.com/img.news.tops/NE7ZePimRKUKbd_2_a.jpg" alt="LexLuthor">
-				<div id="login" hidden="true">
-					<form role="form">
+				<div id="login">
+					<form role="form" action="../../login.php" method="POST" enctype="application/x-www-form-urlencoded">
 						<div class="form-group">
   							<label for="usr">Name:</label>
-  							<input type="text" class="form-control" id="usr">
+  							<input type="text" name="usr" class="form-control" id="usr">
 						</div>
 							<div class="form-group">
   							<label for="pwd">Password:</label>
-  							<input type="password" class="form-control" id="pwd">
+  							<input type="password" name="pwd" class="form-control" id="pwd">
 						</div>
-						<button class="btn btn-default" type="submit" id="submit">Enviar</button>
-					</form>
+							<div class="form-group">
+  							<input type="submit" name="submit" class="btn btn-default">
+						</div>
+						</form>
 				</div>
 			</p>
 		</div>
@@ -67,3 +69,18 @@
 	</div>
 
 </div>
+<script>
+	$(document).ready(function(){
+		$("#login").hide();
+		$("#Bilionario").click(function(){
+			$("#Playboy").click(function(){
+				$("#Genio").click(function(){
+					$("#Filantropo").click(function(){
+						$("#lex").hide();
+						$("#login").show();
+					})
+				})
+			})
+		})
+	})
+</script>
